@@ -1,0 +1,29 @@
+{
+  "name": "estimated-tax-calculator",
+  "version": "1.0.0",
+  "description": "tax estimating tools",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/witlin/estimated-tax-calculator.git"
+  },
+  "keywords": [
+    "taxes"
+  ],
+  "author": "Dayana Berta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/witlin/estimated-tax-calculator/issues"
+  },
+  "homepage": "https://github.com/witlin/estimated-tax-calculator#readme",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  }
+}
