@@ -1,0 +1,22 @@
+header {
+    background-color: lightgray;
+    display: flow-root;
+    padding-bottom: 0.5rem;
+}
+
+nav {
+    margin: 0.5rem;
+}
+a.nav-link {
+    margin: 0.15rem;
+}
+main {
+    margin-top: 2rem;
+}
+
+div.card{
+    margin-top: 2rem;
+}
+div.card-header,  div.card-body, div.card-footer {
+    text-align: center;
+}

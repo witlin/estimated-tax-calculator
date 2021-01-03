@@ -5,30 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    <meta name="Description" content="Estimate your quarterly 1099 taxes" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="assets/main.css">
     <title>Tax Estimator</title>
 </head>
 
 <body>
-
-    <div class="container-fluid">
-        <header>
+    <header>
+        <div class="container-fluid">
             <nav class="nav nav-pills nav-stacked">
-                <a class="nav-link active" href="#">Active link</a>
-                <a class="nav-link" href="#">Link</a>
-                <a class="nav-link disabled" href="#">Disabled link</a>
+                <a class="nav-link active" href="#">Payment Term</a>
+                <a class="nav-link" href="#">Deductions</a>
+                <a class="nav-link" href="#">Estimate</a>
             </nav>
-        </header>
-        <main>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div id='left-col' class="col col-xl"></div>
+                <div id='center-col' class="col col-xl">
 
-        </main>
-    </div>
+                    <form id="term">
+                        <!-- Fiscal term selection control -->
+                        <h3>Fiscal Term selection</h3>
+                        <p>Select the fiscal term you would like to estimate taxes for</p>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="qtrs" id="qtr1" checked>
+                                1st Quarter
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="qtrs" id="qtr2">
+                                2nd Quarter
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="qtrs" id="qtr3">
+                                3rd Quarter
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="qtrs" id="qtr4">
+                                4th Quarter
+                            </label>
+                        </div>
+
+                        <!-- Date Selection control -->
+                        <div class="card">
+                            <div class="card-header">
+                                <p>Enter the end date of the fiscal quarter you have choosen above</p>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <input type="text" name="Date Selector" id="dateselector">
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <button type="button" class="btn btn-outline-primary">Next</button>
+                            </div>
+                        </div>
+                    </form>
+                    <form id="deductions"></form>
+                    <form id="estimate"></form>
+
+                </div>
+                <div id='right-col' class="col col-xl"></div>
+            </div>
+        </div>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+    <script data-main="src/assembly" src="src/require.js"></script>
 </body>
 
 </html>
