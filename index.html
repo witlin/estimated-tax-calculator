@@ -18,66 +18,89 @@
 
 <body>
     <header>
-        <div class="container-fluid">
-            <nav class="nav nav-pills nav-stacked">
-                <a class="nav-link active" href="#">Payment Term</a>
-                <a class="nav-link" href="#">Deductions</a>
-                <a class="nav-link" href="#">Estimate</a>
-            </nav>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a id='start-link' class="nav-link bg-primary active" aria-current="page" href="#">Start</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id='deduct-link' class="nav-link" href="#">Deductions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id='finish-link' class="nav-link" href="#">Finish</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
     </header>
+
     <main>
         <div class="container-fluid">
             <div class="row">
                 <div id='left-col' class="col col-xl"></div>
                 <div id='center-col' class="col col-xl">
 
-                    <form id="term">
+                    <form id="id-getter" class='user-form'>
                         <!-- Fiscal term selection control -->
-                        <h3>Fiscal Term selection</h3>
-                        <p>Select the fiscal term you would like to estimate taxes for</p>
+                        <p class='form-check'>Select the fiscal term you would like to estimate taxes for</p>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="qtrs" id="qtr1" checked>
+                                <input type="radio" class="form-check-input" name="qtrs" id="qtr1" value="1" checked>
                                 1st Quarter
                             </label>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="qtrs" id="qtr2">
+                                <input type="radio" class="form-check-input" name="qtrs" id="qtr2" value="2">
                                 2nd Quarter
                             </label>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="qtrs" id="qtr3">
+                                <input type="radio" class="form-check-input" name="qtrs" id="qtr3" value="3">
                                 3rd Quarter
                             </label>
                         </div>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="qtrs" id="qtr4">
+                                <input type="radio" class="form-check-input" name="qtrs" id="qtr4" value="4">
                                 4th Quarter
                             </label>
                         </div>
 
                         <!-- Date Selection control -->
-                        <div class="card">
-                            <div class="card-header">
-                                <p>Enter the end date of the fiscal quarter you have choosen above</p>
+                        <div class='year'>
+                            <div class='year-header'>
+                                <p>Enter the current fiscal year</p>
                             </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    <input type="text" name="Date Selector" id="dateselector">
+                            <div class='year-body'>
+                                <p>
+                                    <input type="text" name="Date Selector" id="yearselector">
                                 </p>
                             </div>
-                            <div class="card-footer text-muted">
-                                <button type="button" class="btn btn-outline-primary">Next</button>
+                            <div class='year-footer'>
+                                <!-- submit start-form -->
+                                <button type="button" id="idsubmit" class="btn btn-outline-primary">Next</button>
                             </div>
                         </div>
                     </form>
-                    <form id="deductions"></form>
-                    <form id="estimate"></form>
+                    <form id="deductions" class='user-form'>
+                        <h3 class='form-check'>Quarterly Deductions</h3>
+                    </form>
+                    <form id="estimate" class='user-form'>
+                        <h3 class='form-check'>Estimate</h3>
+                    </form>
 
                 </div>
                 <div id='right-col' class="col col-xl"></div>

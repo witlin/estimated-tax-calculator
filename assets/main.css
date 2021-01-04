@@ -1,22 +1,72 @@
-header {
-    background-color: lightgray;
-    display: flow-root;
-    padding-bottom: 0.5rem;
+body {
+ background-color:#ededed;
 }
 
-nav {
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background-color:#d9dbdb;
+    z-index: 10;
+    display: flow-root;
+}
+
+.navbar {
     margin: 0.5rem;
 }
-a.nav-link {
-    margin: 0.15rem;
+.navbar-toggler {
+    margin-bottom: 1em;
 }
+li.nav-item {
+    margin: 0.5rem;
+}
+
 main {
+    overflow: hidden;
+    z-index: 1;
     margin-top: 2rem;
 }
 
-div.card{
+form.user-form {
+    margin-top: 4rem;
+}
+.form-check {
+    z-index: 5;
+    text-align: center;
+}
+h3.form-check {
+    margin-bottom: 1rem;
+}
+p.form-check {
+    z-index: 6;
+    margin-bottom: 0.5rem;
+}
+
+div.year {
     margin-top: 2rem;
 }
-div.card-header,  div.card-body, div.card-footer {
+div.year-header,  div.year-body, div.year-footer {
     text-align: center;
+}
+div.year-footer {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* 
+** dynamic style mockups 
+*/
+
+/* rendering behavior as part of the nav.js object */
+a#start-link {
+    color: white;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: max-content;
+}
+form#deductions {
+    display: none;
+}
+form#estimate {
+    display: none;
 }
